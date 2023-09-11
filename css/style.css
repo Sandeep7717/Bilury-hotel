@@ -36,7 +36,7 @@ header {
 }
 
 .overlay {
-    background-color: rgb(0, 0, 0, 0.40);
+    background-color: rgb(0, 0, 0, 0.55);
     position: absolute;
     top: 0;
     left: 0;
@@ -80,6 +80,7 @@ header {
     padding: 0 5px;
     width: 20px;
     transition: .5s ease all;
+    display: inline-block;
 
 }
 
@@ -159,6 +160,14 @@ header {
     background: #a7856a;
     padding: 10px 30px;
     border-radius: 2px;
+    transition: 0.9s ease all;
+    /* color: #fff !important; */
+
+}
+
+.menu-bar>ul>li:last-child:hover a {
+    background: #fff;
+
 
 }
 
@@ -166,10 +175,7 @@ header {
     color: #a7856a;
 }
 
-.menu-bar>li:hover:last-child a {
 
-    background-color: #8e715a;
-}
 
 h1 {
     color: #fff;
@@ -198,6 +204,10 @@ h1 {
     background: #fff;
     display: inline-block;
     color: #000;
+}
+
+.black-box {
+    margin-bottom: 100px;
 }
 
 .black-box ul {
@@ -238,21 +248,7 @@ h1 {
 
 }
 
-.circle-one {
-    width: 15px;
-    height: 15px;
-    background: #928E8A;
-    border-radius: 50px;
-    margin: 0 4px;
-}
 
-.circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-
-}
 
 .two-box {
     display: flex;
@@ -408,6 +404,8 @@ h1 {
 }
 
 .all-line-bg {
+    position: relative;
+    z-index: 999;
     text-align: center;
 }
 
@@ -447,6 +445,7 @@ h1 {
     display: flex;
     margin: 20px 0;
     flex-wrap: wrap;
+    z-index: 999;
 
 }
 
@@ -735,7 +734,7 @@ h1 {
     height: 100%;
     padding: 100px 0;
     position: relative;
-    z-index: 1;
+    z-index: 9999;
     background-size: cover;
 }
 
@@ -746,7 +745,6 @@ h1 {
     background: rgb(0, 0, 0, 0.3);
     position: absolute;
 
-    z-index: -1;
 
 }
 
@@ -802,6 +800,9 @@ h1 {
     display: flex;
     text-align: center;
     margin: 50px 0;
+    position: relative;
+    z-index: 999;
+
 }
 
 .bg-black li {
@@ -885,6 +886,18 @@ h1 {
     background-size: cover;
     background-attachment: fixed;
     padding: 50px;
+    z-index: 999;
+    position: relative;
+}
+
+.over-bg {
+    background-color: rgb(0, 0, 0, 0.40);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
 }
 
 .icon-all {
@@ -913,6 +926,11 @@ h1 {
     color: #fdfdfd;
     font-size: 26px;
     font-weight: 400;
+
+}
+
+.booking-left {
+    z-index: 999;
 }
 
 .booking-left p {
@@ -936,6 +954,7 @@ h1 {
     border: none;
     border-radius: 2px;
     margin: 10px 0;
+    outline: none;
 }
 
 .booking-all {
@@ -943,12 +962,14 @@ h1 {
     justify-content: space-between;
     align-items: center;
 
+    z-index: 999;
 }
 
 .booking-right {
     background: #e4e4e4;
     padding: 50px 20px;
     width: 35%;
+    z-index: 999;
     border-radius: 2px;
 }
 
@@ -966,26 +987,188 @@ h1 {
     display: inline-block;
 
 
-
 }
 
 .check {
     text-align: center;
+
 
 }
 
 .booking-right ul {
     list-style: disc;
     color: #b18c57;
+    z-index: 999;
 }
 
 .booking-right li {
     margin: 10px 18px;
+
 }
 
 .booking-right h2 {
     font-weight: 500;
     font-size: 25px;
+
+}
+
+footer {
+    background-color: #222222;
+    background-size: cover;
+    width: 100%;
+
+
+
+
+
+}
+
+
+
+.footer-text {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 150px 0;
+}
+
+.magna {
+    width: 25%;
+    margin-right: 10px;
+}
+
+
+
+
+.magna p {
+    color: #A9A9A9;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 10px 0;
+}
+
+.magna ul {
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.magna ul li {
+    background-color: #a7721c;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    padding: 12px 15px;
+    transition: 0.9s ease all;
+    cursor: pointer;
+}
+
+
+
+.magna ul li:nth-child(2) {
+    margin: 0 20px;
+}
+
+.address {
+    width: 25%;
+    margin-left: 10px;
+}
+
+
+.address h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+
+}
+
+
+.address ul li {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+}
+
+
+
+.address ul li p {
+    color: #A9A9A9;
+    font-size: 16px;
+    line-height: 27px;
+    padding-left: 10px;
+}
+
+
+.recent {
+    width: 25%;
+    margin-left: 20px;
+}
+
+.recent h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+
+}
+
+.recent ul li {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.recent ul li img {
+    width: 100px;
+
+    border-radius: 4px;
+
+}
+
+.recent ul li a p {
+    color: #C5C5C5;
+    padding: 5px 0;
+}
+
+
+.recent ul li p {
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+.working {
+    width: 25%;
+    padding-left: 20px;
+    color: #000;
+}
+
+.working h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+
+}
+
+.working ul {
+    padding: 10px;
+}
+
+.working ul li {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C5C5C5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.working ul li p {
+    font-size: 18px;
+    color: #C5C5C5;
 }
 
 
@@ -1061,9 +1244,14 @@ h1 {
 
     }
 
+    .black-box {
+        margin-bottom: 100px;
+    }
+
     .black-box ul {
         display: block;
         padding: 10px;
+
 
     }
 
@@ -1244,6 +1432,7 @@ h1 {
 
     .booking-all {
         display: block;
+        z-index: 999;
     }
 
     .booking-right {
@@ -1265,5 +1454,30 @@ h1 {
 
     .booking-left p {
         width: 100%;
+    }
+
+    .footer-text {
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+
+    .magna {
+        width: 100%;
+    }
+
+    .address {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .working {
+        width: 50%;
+        margin: 10px 0;
+    }
+
+    .recent {
+        width: 40%;
+        margin: 10px 0;
     }
 }
